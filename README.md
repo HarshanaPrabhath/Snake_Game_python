@@ -8,9 +8,9 @@ This is a simple snake game implemented in Python using Turtle Graphic library.
 
 ⚡_Features...
 
-✔ Classic snake gameplay where the player controls a snake to eat food and grow longer.
-✔ Score tracking to keep track of the player's progress.
-✔ Game over when the snake collides with itself or the boundaries of the screen.
+✔ Classic snake gameplay where the player controls a snake to eat food and grow longer.<br>
+✔ Score tracking to keep track of the player's progress.<br>
+✔ Game over when the snake collides with itself or the boundaries of the screen.<br>
 
 ⚡_How_To_Play...
 
