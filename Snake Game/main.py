@@ -1,6 +1,6 @@
 from turtle import Screen
 from snake import Snake
-from out_square import Square,OUT_RANGE_A,OUT_RANGE_B
+from out_square import Square, OUT_RANGE_A, OUT_RANGE_B
 from food import Food
 from scoreboard import Scoreboard
 import time
@@ -31,13 +31,21 @@ while game_is_on:
 
     my_snake.move()
 
+    # detect collision with food
     if my_snake.head.distance(food) < 15:
         food.refresh()
         my_snake.extend()
         score.increase_score()
 
+    # detect collision with wall
     if my_snake.head.xcor() > OUT_RANGE_B or my_snake.head.xcor() < OUT_RANGE_A or my_snake.head.ycor() > OUT_RANGE_B or my_snake.head.ycor() < OUT_RANGE_A:
         score.game_over()
         game_is_on = False
+
+    # detect collision with own tail
+    for segment in my_snake.segments[1:]:
+        if my_snake.head.distance(segment) < 10:
+            score.game_over()
+            game_is_on = False
 
 screen.exitonclick()

@@ -1,7 +1,7 @@
 from turtle import Turtle
 
-OUT_RANGE_A = -490
-OUT_RANGE_B = 490
+OUT_RANGE_A = -290
+OUT_RANGE_B = 290
 
 
 class Square(Turtle):
